@@ -1,0 +1,9 @@
+Referencias para el proyecto
+
+http://phpqrcode.sourceforge.net/
+
+http://phpqrcode.sourceforge.net/examples/index.php?example=001
+
+https://duckduckgo.com/?t=ffcm&q=PHP+QR+Code&ia=web
+
+https://devdocs.io/
