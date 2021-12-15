@@ -1,0 +1,9 @@
+
+
+////////////////////////////
+sudo /opt/lampp/lampp start
+////////////////////////////
+
+
+Url servidor de prueba para el proyecto
+bathroomcleaning.epizy.com
