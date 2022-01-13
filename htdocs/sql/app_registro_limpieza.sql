@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 05-01-2022 a las 03:35:24
+-- Tiempo de generación: 13-01-2022 a las 02:54:49
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.3.31
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `app_registro_limpieza`
 --
-CREATE DATABASE IF NOT EXISTS `app_registro_limpieza` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `app_registro_limpieza`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +27,6 @@ USE `app_registro_limpieza`;
 -- Estructura de tabla para la tabla `criterios`
 --
 
-DROP TABLE IF EXISTS `criterios`;
 CREATE TABLE `criterios` (
   `id_criterio` int(11) NOT NULL,
   `nombre_critario` int(11) NOT NULL,
@@ -41,20 +38,26 @@ CREATE TABLE `criterios` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `cubulo`
+-- Estructura de tabla para la tabla `cubiculo`
 --
 
-DROP TABLE IF EXISTS `cubulo`;
-CREATE TABLE `cubulo` (
+CREATE TABLE `cubiculo` (
   `id_cubiculo` int(11) NOT NULL,
-  `id_tipo_cubiculo` int(11) NOT NULL,
+  `id_tipo_cubiculo` int(11) DEFAULT NULL,
   `id_piso` int(11) NOT NULL,
-  `nombre_cubiculo` varchar(50) DEFAULT NULL,
+  `nombre_cubiculo` varchar(50) NOT NULL,
   `descripcion` longtext NOT NULL,
   `QR_codigo_hash` varchar(255) NOT NULL,
   `id_imagen_QR` varchar(255) NOT NULL,
-  `id_criterios` int(11) NOT NULL
+  `id_criterios` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `cubiculo`
+--
+
+INSERT INTO `cubiculo` (`id_cubiculo`, `id_tipo_cubiculo`, `id_piso`, `nombre_cubiculo`, `descripcion`, `QR_codigo_hash`, `id_imagen_QR`, `id_criterios`) VALUES
+(2, NULL, 1, 'nombre 1', 'descripcion', 'xxxxx', '/img/nombreqr.png', NULL);
 
 -- --------------------------------------------------------
 
@@ -62,7 +65,6 @@ CREATE TABLE `cubulo` (
 -- Estructura de tabla para la tabla `edificio`
 --
 
-DROP TABLE IF EXISTS `edificio`;
 CREATE TABLE `edificio` (
   `id_edificio` int(11) NOT NULL,
   `ubicacion` varchar(30) NOT NULL,
@@ -70,13 +72,19 @@ CREATE TABLE `edificio` (
   `descripcion` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `edificio`
+--
+
+INSERT INTO `edificio` (`id_edificio`, `ubicacion`, `nombre_edicicio`, `descripcion`) VALUES
+(1, 'Bayamon', 'Yucan center', 'savjlb kjsnbdlkasvbsdakljv');
+
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `evaluacion`
 --
 
-DROP TABLE IF EXISTS `evaluacion`;
 CREATE TABLE `evaluacion` (
   `id_evaluacion` int(11) NOT NULL,
   `id_cubiculo` int(11) NOT NULL,
@@ -92,7 +100,6 @@ CREATE TABLE `evaluacion` (
 -- Estructura de tabla para la tabla `id_propiedad_criterio`
 --
 
-DROP TABLE IF EXISTS `id_propiedad_criterio`;
 CREATE TABLE `id_propiedad_criterio` (
   `id_propiedad_criterio` int(11) NOT NULL,
   `nombre_propiedad_criterio` int(11) NOT NULL,
@@ -105,7 +112,6 @@ CREATE TABLE `id_propiedad_criterio` (
 -- Estructura de tabla para la tabla `image_cubiculo`
 --
 
-DROP TABLE IF EXISTS `image_cubiculo`;
 CREATE TABLE `image_cubiculo` (
   `id_imagen` int(11) NOT NULL,
   `descripcion` varchar(255) DEFAULT NULL
@@ -117,12 +123,18 @@ CREATE TABLE `image_cubiculo` (
 -- Estructura de tabla para la tabla `piso`
 --
 
-DROP TABLE IF EXISTS `piso`;
 CREATE TABLE `piso` (
   `id_piso` int(11) NOT NULL,
   `id_edificio` int(11) NOT NULL,
   `comentarios` longtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `piso`
+--
+
+INSERT INTO `piso` (`id_piso`, `id_edificio`, `comentarios`) VALUES
+(1, 1, 'comentarios');
 
 -- --------------------------------------------------------
 
@@ -130,12 +142,73 @@ CREATE TABLE `piso` (
 -- Estructura de tabla para la tabla `tipo_cubiculo`
 --
 
-DROP TABLE IF EXISTS `tipo_cubiculo`;
 CREATE TABLE `tipo_cubiculo` (
   `id_tipo_cubiculo` int(11) NOT NULL,
   `nombre_tipo_cubiculo` varchar(30) NOT NULL,
   `comentarios` longtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `cubiculo`
+--
+ALTER TABLE `cubiculo`
+  ADD PRIMARY KEY (`id_cubiculo`),
+  ADD KEY `FK_Piso_Cubiculo` (`id_piso`);
+
+--
+-- Indices de la tabla `edificio`
+--
+ALTER TABLE `edificio`
+  ADD PRIMARY KEY (`id_edificio`);
+
+--
+-- Indices de la tabla `piso`
+--
+ALTER TABLE `piso`
+  ADD PRIMARY KEY (`id_piso`),
+  ADD KEY `FK_Piso_Edificio` (`id_edificio`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `cubiculo`
+--
+ALTER TABLE `cubiculo`
+  MODIFY `id_cubiculo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `edificio`
+--
+ALTER TABLE `edificio`
+  MODIFY `id_edificio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `piso`
+--
+ALTER TABLE `piso`
+  MODIFY `id_piso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `cubiculo`
+--
+ALTER TABLE `cubiculo`
+  ADD CONSTRAINT `FK_Piso_Cubiculo` FOREIGN KEY (`id_piso`) REFERENCES `piso` (`id_piso`);
+
+--
+-- Filtros para la tabla `piso`
+--
+ALTER TABLE `piso`
+  ADD CONSTRAINT `FK_Piso_Edificio` FOREIGN KEY (`id_edificio`) REFERENCES `edificio` (`id_edificio`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
