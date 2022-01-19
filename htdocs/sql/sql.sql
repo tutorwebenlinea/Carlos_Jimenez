@@ -126,7 +126,7 @@ CREATE TABLE id_propiedad_criterio(
 --         ON cubiculo.id_piso = piso.id_piso
 -- WHERE cubiculo.id_cubiculo=2;
 
--- NOmbre del edificio comenterios del piso y nombr edecubiculo 
+-- Nombre del edificio comenterios del piso y nombr edecubiculo 
 
 -- SELECT edificio.nombre_edicicio,piso.comentarios, cubiculo.nombre_cubiculo
 -- FROM edificio
