@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 13-01-2022 a las 02:54:49
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 7.3.31
+-- Tiempo de generación: 27-01-2022 a las 01:31:00
+-- Versión del servidor: 10.4.22-MariaDB
+-- Versión de PHP: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,23 +24,50 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `criterios`
+-- Estructura de tabla para la tabla `criterio`
 --
 
-CREATE TABLE `criterios` (
+DROP TABLE IF EXISTS `criterio`;
+CREATE TABLE `criterio` (
   `id_criterio` int(11) NOT NULL,
-  `nombre_critario` int(11) NOT NULL,
-  `id_propiedad_criterio` int(11) NOT NULL,
+  `nombre_criterio` int(11) NOT NULL,
   `descripcion` longtext DEFAULT NULL,
-  `hora_fin` time DEFAULT NULL
+  `id_evaluacion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Truncar tablas antes de insertar `criterio`
+--
+
+TRUNCATE TABLE `criterio`;
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `criterio_evaluacion`
+--
+
+DROP TABLE IF EXISTS `criterio_evaluacion`;
+CREATE TABLE `criterio_evaluacion` (
+  `id_criterio_evaluacion` int(11) NOT NULL,
+  `nombre_criterio` int(11) NOT NULL,
+  `descripcion` longtext DEFAULT NULL,
+  `id_cubiculo` int(11) DEFAULT NULL,
+  `id_evaluacion` int(11) DEFAULT NULL,
+  `id_criterio` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Truncar tablas antes de insertar `criterio_evaluacion`
+--
+
+TRUNCATE TABLE `criterio_evaluacion`;
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `cubiculo`
 --
 
+DROP TABLE IF EXISTS `cubiculo`;
 CREATE TABLE `cubiculo` (
   `id_cubiculo` int(11) NOT NULL,
   `id_tipo_cubiculo` int(11) DEFAULT NULL,
@@ -48,23 +75,21 @@ CREATE TABLE `cubiculo` (
   `nombre_cubiculo` varchar(50) NOT NULL,
   `descripcion` longtext NOT NULL,
   `QR_codigo_hash` varchar(255) NOT NULL,
-  `id_imagen_QR` varchar(255) NOT NULL,
-  `id_criterios` int(11) DEFAULT NULL
+  `id_imagen_QR` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `cubiculo`
+-- Truncar tablas antes de insertar `cubiculo`
 --
 
-INSERT INTO `cubiculo` (`id_cubiculo`, `id_tipo_cubiculo`, `id_piso`, `nombre_cubiculo`, `descripcion`, `QR_codigo_hash`, `id_imagen_QR`, `id_criterios`) VALUES
-(2, NULL, 1, 'nombre 1', 'descripcion', 'xxxxx', '/img/nombreqr.png', NULL);
-
+TRUNCATE TABLE `cubiculo`;
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `edificio`
 --
 
+DROP TABLE IF EXISTS `edificio`;
 CREATE TABLE `edificio` (
   `id_edificio` int(11) NOT NULL,
   `ubicacion` varchar(30) NOT NULL,
@@ -73,10 +98,15 @@ CREATE TABLE `edificio` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Truncar tablas antes de insertar `edificio`
+--
+
+TRUNCATE TABLE `edificio`;
+--
 -- Volcado de datos para la tabla `edificio`
 --
 
-INSERT INTO `edificio` (`id_edificio`, `ubicacion`, `nombre_edicicio`, `descripcion`) VALUES
+INSERT IGNORE INTO `edificio` (`id_edificio`, `ubicacion`, `nombre_edicicio`, `descripcion`) VALUES
 (1, 'Bayamon', 'Yucan center', 'savjlb kjsnbdlkasvbsdakljv');
 
 -- --------------------------------------------------------
@@ -85,6 +115,7 @@ INSERT INTO `edificio` (`id_edificio`, `ubicacion`, `nombre_edicicio`, `descripc
 -- Estructura de tabla para la tabla `evaluacion`
 --
 
+DROP TABLE IF EXISTS `evaluacion`;
 CREATE TABLE `evaluacion` (
   `id_evaluacion` int(11) NOT NULL,
   `id_cubiculo` int(11) NOT NULL,
@@ -94,35 +125,53 @@ CREATE TABLE `evaluacion` (
   `hora_fin` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Truncar tablas antes de insertar `evaluacion`
+--
+
+TRUNCATE TABLE `evaluacion`;
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `id_propiedad_criterio`
 --
 
+DROP TABLE IF EXISTS `id_propiedad_criterio`;
 CREATE TABLE `id_propiedad_criterio` (
   `id_propiedad_criterio` int(11) NOT NULL,
   `nombre_propiedad_criterio` int(11) NOT NULL,
   `descripcion` longtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Truncar tablas antes de insertar `id_propiedad_criterio`
+--
+
+TRUNCATE TABLE `id_propiedad_criterio`;
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `image_cubiculo`
 --
 
+DROP TABLE IF EXISTS `image_cubiculo`;
 CREATE TABLE `image_cubiculo` (
   `id_imagen` int(11) NOT NULL,
   `descripcion` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Truncar tablas antes de insertar `image_cubiculo`
+--
+
+TRUNCATE TABLE `image_cubiculo`;
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `piso`
 --
 
+DROP TABLE IF EXISTS `piso`;
 CREATE TABLE `piso` (
   `id_piso` int(11) NOT NULL,
   `id_edificio` int(11) NOT NULL,
@@ -130,10 +179,15 @@ CREATE TABLE `piso` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Truncar tablas antes de insertar `piso`
+--
+
+TRUNCATE TABLE `piso`;
+--
 -- Volcado de datos para la tabla `piso`
 --
 
-INSERT INTO `piso` (`id_piso`, `id_edificio`, `comentarios`) VALUES
+INSERT IGNORE INTO `piso` (`id_piso`, `id_edificio`, `comentarios`) VALUES
 (1, 1, 'comentarios');
 
 -- --------------------------------------------------------
@@ -142,6 +196,7 @@ INSERT INTO `piso` (`id_piso`, `id_edificio`, `comentarios`) VALUES
 -- Estructura de tabla para la tabla `tipo_cubiculo`
 --
 
+DROP TABLE IF EXISTS `tipo_cubiculo`;
 CREATE TABLE `tipo_cubiculo` (
   `id_tipo_cubiculo` int(11) NOT NULL,
   `nombre_tipo_cubiculo` varchar(30) NOT NULL,
@@ -149,21 +204,47 @@ CREATE TABLE `tipo_cubiculo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Truncar tablas antes de insertar `tipo_cubiculo`
+--
+
+TRUNCATE TABLE `tipo_cubiculo`;
+--
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `criterio`
+--
+ALTER TABLE `criterio`
+  ADD PRIMARY KEY (`id_criterio`);
+
+--
+-- Indices de la tabla `criterio_evaluacion`
+--
+ALTER TABLE `criterio_evaluacion`
+  ADD PRIMARY KEY (`id_criterio_evaluacion`),
+  ADD KEY `id_cubiculo` (`id_cubiculo`),
+  ADD KEY `id_evaluacion` (`id_evaluacion`),
+  ADD KEY `id_criterio` (`id_criterio`);
 
 --
 -- Indices de la tabla `cubiculo`
 --
 ALTER TABLE `cubiculo`
-  ADD PRIMARY KEY (`id_cubiculo`),
-  ADD KEY `FK_Piso_Cubiculo` (`id_piso`);
+  ADD PRIMARY KEY (`id_cubiculo`);
 
 --
 -- Indices de la tabla `edificio`
 --
 ALTER TABLE `edificio`
   ADD PRIMARY KEY (`id_edificio`);
+
+--
+-- Indices de la tabla `evaluacion`
+--
+ALTER TABLE `evaluacion`
+  ADD PRIMARY KEY (`id_evaluacion`),
+  ADD KEY `id_cubiculo` (`id_cubiculo`);
 
 --
 -- Indices de la tabla `piso`
@@ -177,16 +258,28 @@ ALTER TABLE `piso`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `criterio_evaluacion`
+--
+ALTER TABLE `criterio_evaluacion`
+  MODIFY `id_criterio_evaluacion` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `cubiculo`
 --
 ALTER TABLE `cubiculo`
-  MODIFY `id_cubiculo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_cubiculo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `edificio`
 --
 ALTER TABLE `edificio`
   MODIFY `id_edificio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `evaluacion`
+--
+ALTER TABLE `evaluacion`
+  MODIFY `id_evaluacion` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `piso`
@@ -199,10 +292,18 @@ ALTER TABLE `piso`
 --
 
 --
--- Filtros para la tabla `cubiculo`
+-- Filtros para la tabla `criterio_evaluacion`
 --
-ALTER TABLE `cubiculo`
-  ADD CONSTRAINT `FK_Piso_Cubiculo` FOREIGN KEY (`id_piso`) REFERENCES `piso` (`id_piso`);
+ALTER TABLE `criterio_evaluacion`
+  ADD CONSTRAINT `criterio_evaluacion_ibfk_1` FOREIGN KEY (`id_cubiculo`) REFERENCES `cubiculo` (`id_cubiculo`),
+  ADD CONSTRAINT `criterio_evaluacion_ibfk_2` FOREIGN KEY (`id_evaluacion`) REFERENCES `evaluacion` (`id_evaluacion`),
+  ADD CONSTRAINT `criterio_evaluacion_ibfk_3` FOREIGN KEY (`id_criterio`) REFERENCES `criterio` (`id_criterio`);
+
+--
+-- Filtros para la tabla `evaluacion`
+--
+ALTER TABLE `evaluacion`
+  ADD CONSTRAINT `evaluacion_ibfk_1` FOREIGN KEY (`id_cubiculo`) REFERENCES `cubiculo` (`id_cubiculo`);
 
 --
 -- Filtros para la tabla `piso`
