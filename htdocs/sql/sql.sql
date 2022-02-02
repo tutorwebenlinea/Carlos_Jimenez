@@ -126,15 +126,15 @@ CREATE TABLE id_propiedad_criterio(
 --         ON cubiculo.id_piso = piso.id_piso
 -- WHERE cubiculo.id_cubiculo=2;
 
--- Nombre del edificio comenterios del piso y nombr edecubiculo 
+-- Nombre del edificio comenterios del piso y nombre del cubiculo 
 
--- SELECT edificio.nombre_edicicio,piso.comentarios, cubiculo.nombre_cubiculo
--- FROM edificio
---     INNER JOIN piso
---         ON piso.id_edificio = edificio.id_edificio
---     INNER JOIN cubiculo
---         ON cubiculo.id_piso = piso.id_piso
--- WHERE cubiculo.id_cubiculo=2;
+SELECT edificio.nombre_edicicio,piso.comentarios, cubiculo.nombre_cubiculo
+FROM edificio
+    INNER JOIN piso
+        ON piso.id_edificio = edificio.id_edificio
+    INNER JOIN cubiculo
+        ON cubiculo.id_piso = piso.id_piso
+WHERE cubiculo.id_cubiculo=2;
 
 CREATE TABLE Persons (
     Personid int NOT NULL AUTO_INCREMENT,
@@ -153,3 +153,28 @@ CREATE TABLE Orders (
     CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID)
     REFERENCES Persons(PersonID)
 );
+
+ALTER TABLE cubulo RENAME cubiculo;
+
+ALTER TABLE cubiculo
+ADD FOREIGN KEY (id_piso) REFERENCES piso(id_piso); 
+
+NOTA : "id_propiedad_criterio" Verificar funcion de4 la tabala 
+
+
+-- 26 de enero 2022
+-- //////////////////////////////////////////////////////////
+--  Se debe definir una constante obligatoria en el proceso.
+ CREATE TABLE evaluacion_cubiculo(
+ 	
+	id_evaluacion_cubiculo int(11) NOT NULL AUTO_INCREMENT,
+	id_cubiculo int(11) NOT NULL, 
+	id_evaluacion int(11) NOT NULL,
+    PRIMARY KEY (id_evaluacion_cubiculo),
+    CONSTRAINT FK_Cubuculo FOREIGN KEY (id_cubiculo)
+    REFERENCES cubiculo(id_cubiculo),
+    CONSTRAINT FK_evaluacion FOREIGN KEY (id_evaluacion)
+    REFERENCES evaluacion(id_evaluacion)
+    
+	);
+
