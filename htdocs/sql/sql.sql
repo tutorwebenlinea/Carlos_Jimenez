@@ -26,6 +26,14 @@ CREATE TABLE tipo_usuario (
 -- ========================================================
 
 
+CREATE TABLE empresa (
+
+	id_empresa int(11) NOT NULL,
+	ubicacion varchar(30) NOT NULL,
+	nombre_empresa varchar(255) NOT NULL,
+	descripcion LONGTEXT NOT NULL 
+
+);
 
 
 CREATE TABLE edificio (
@@ -66,8 +74,6 @@ CREATE TABLE piso(
 	id_piso int(11) NOT NULL,
 	id_edificio int(11) NOT NULL,
 	comentarios LONGTEXT NULL
-
-
 );
 
 
@@ -128,13 +134,13 @@ CREATE TABLE id_propiedad_criterio(
 
 -- Nombre del edificio comenterios del piso y nombre del cubiculo 
 
--- SELECT edificio.nombre_edicicio,piso.comentarios, cubiculo.nombre_cubiculo
--- FROM edificio
---     INNER JOIN piso
---         ON piso.id_edificio = edificio.id_edificio
---     INNER JOIN cubiculo
---         ON cubiculo.id_piso = piso.id_piso
--- WHERE cubiculo.id_cubiculo=2;
+SELECT edificio.nombre_edicicio,piso.comentarios, cubiculo.nombre_cubiculo
+FROM edificio
+    INNER JOIN piso
+        ON piso.id_edificio = edificio.id_edificio
+    INNER JOIN cubiculo
+        ON cubiculo.id_piso = piso.id_piso
+WHERE cubiculo.id_cubiculo=2;
 
 CREATE TABLE Persons (
     Personid int NOT NULL AUTO_INCREMENT,
