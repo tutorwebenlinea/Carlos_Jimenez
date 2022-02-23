@@ -1,5 +1,5 @@
 
-<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad dicta sint, libero aspernatur culpa ab dolores praesentium corporis? Tempora adipisci veritatis, illo iusto, cumque cum nesciunt corporis eum tenetur!</h1>
+<h1> consectetur adipisicing elit. Velit ad dicta sint, libero aspernatur culpa ab dolores praesentium corporis? Tempora adipisci veritatis, illo iusto, cumque cum nesciunt corporis eum tenetur!</h1>
 
   <form action="/action_page.php" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
       <h2 class="w3-center">
