@@ -1,6 +1,6 @@
 <?php
 
-function FunctionName($value = '')
+function crear_($value = '')
 {
     // code...
 }
