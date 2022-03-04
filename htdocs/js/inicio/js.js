@@ -25,6 +25,7 @@ console.log(btn_pass);
 
 btn_registro.addEventListener("click", function(argument) {
   argument.preventDefault();
+
   altaUsuario(btn_nombre, btn_correo, btn_pass);
 });
 

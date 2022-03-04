@@ -3,7 +3,7 @@
   <title>
     Document
   </title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+  <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet"/>
   <style type="text/css">
     @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
@@ -261,5 +261,7 @@
   <script src="./js/sweetalert.min.js" type="text/javascript">
   </script>
   <script src="./js/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="./js/inicio/validacion.js" type="text/javascript">
   </script>
 </meta>
