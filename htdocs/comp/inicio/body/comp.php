@@ -8,10 +8,12 @@
       <h1>
         Crear una cuenta
       </h1>
-      <input class="nombre" name="nombre" placeholder="Name" type="text"/>
-      <input class="correo" name="correo" placeholder="Email" type="email"/>
-      <input class="pass" name="pass" placeholder="Password" type="password"/>
-      <input class="btn_registro" type="submit" value=" Sign Up"/>
+      <input autocomplete="of" class="nombre txt" name="nombre" placeholder="Nombre" type="text"/>
+      <input autocomplete="of" class="usuario txt" name="usuario" placeholder="Usuario" type="text"/>
+      <input autocomplete="of" class="correo txt" name="correo" placeholder="Correo" type="email"/>
+      <input autocomplete="of" class="pass txt" name="pass" placeholder="Contraseña" type="password"/>
+      <input autocomplete="of" class="conf_pass txt" name="conf_pass" placeholder="Confirma la contraseña" type="password"/>
+      <input class="btn_registro" type="submit" value="Sign Up"/>
     </form>
   </div>
   <div class="form-container sign-in-container">
@@ -19,14 +21,12 @@
       <h1>
         Sign in
       </h1>
-      <input placeholder="Email" type="email"/>
-      <input placeholder="Password" type="password"/>
+      <input autocomplete="of" placeholder="Email" type="email"/>
+      <input autocomplete="of" placeholder="Password" type="password"/>
       <a href="#">
         ¿Olvidaste tu contraseña?
       </a>
-      <button>
-        Sign In
-      </button>
+      <input class="btn_inicio" type="submit" value="Sign In"/>
     </form>
   </div>
   <div class="overlay-container">

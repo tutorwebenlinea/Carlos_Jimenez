@@ -9,13 +9,15 @@
       </h2>
     </header>
     <div class="w3-container">
-      <textarea class="modal_mensaje" style="width:100%; height:250px; padding:20px;resize: none;">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, quibusdam. Culpa consectetur fugit ex corporis cupiditate illum adipisci, vel. Atque, magnam eligendi ab voluptatibus fuga doloribus mollitia autem deleniti facilis.
+      <textarea class="modal_mensaje" disabled="" style="width:100%; height:250px; padding:20px;resize: none;">
       </textarea>
     </div>
     <footer class="w3-container" style="background: linear-gradient(to right, #FF4B2B, #FF416C); color: white;">
       <p class="modal_pie">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime laudantium quod, magnam illum repellendus deserunt pariatur? Ex quas officiis consectetur id distinctio, ipsa aperiam, nemo mollitia. Blanditiis distinctio ab perspiciatis.
+        Copa esta clave,  lo cual servirá para que puedas recuperar tu cuenta si olvidas la contraseña  o puedes descargar la clave un archivo de recuperación aquí.
+        <button class="w3-button w3-block w3-green btn_descargar">
+          Button
+        </button>
       </p>
     </footer>
   </div>
