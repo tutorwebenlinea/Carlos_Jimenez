@@ -29,16 +29,21 @@ function registro(argument) {
 
   // ========================================================
 
-  let txt_nombre = document.querySelector(".registro .nombre");
-  let txt_usuario = document.querySelector(".registro .usuario");
-  let txt_correo = document.querySelector(".registro .correo");
-  let txt_pass = document.querySelector(".registro .pass");
+  let txt_nombre = document.querySelector(".registro .nombre_txt");
+  let txt_usuario = document.querySelector(".registro .usuario_txt");
+  let txt_correo = document.querySelector(".registro .correo_txt");
+  let txt_pass = document.querySelector(".registro .pass_txt");
   let txt_conf_pass = document.querySelector(".registro .conf_pass");
   let btn_registro = document.querySelector(".registro .btn_registro");
 
-  // console.log(txt_nombre);
-  // console.log(txt_correo);
-  // console.log(txt_pass);
+  console.log('===============');
+  console.log(txt_nombre);
+  console.log(txt_usuario);
+  console.log(txt_correo);
+  console.log(txt_pass);
+  console.log(txt_conf_pass);
+  console.log(btn_registro);
+  console.log('===============');
 
   btn_registro.addEventListener("click", function(argument) {
     argument.preventDefault();
@@ -56,6 +61,7 @@ function registro(argument) {
       if (txt_pass.value == txt_conf_pass.value) {
         console.log('ok');
       }
+
       altaUsuario(txt_nombre, txt_usuario, txt_correo, txt_pass);
     } else {
       // console.log('Tienes campos cvacios ');
@@ -63,7 +69,7 @@ function registro(argument) {
 
   });
 
-  function altaUsuario(txt_nombre, txt_correo, txt_pass) {
+  function altaUsuario(txt_nombre, txt_usuario, txt_correo, txt_pass) {
     // console.log(txt_nombre);
     // console.log(txt_correo);
     // console.log(txt_pass);
@@ -96,43 +102,43 @@ function registro(argument) {
 
       console.log(resultado);
 
-      let mensaje = JSON.parse(resultado);
+      // let mensaje = JSON.parse(resultado);
 
-      if (mensaje['respuesta'] == "existe") {
-        modal_mensaje.innerHTML = " el coreo electronico ya exuiste ";
-        modal_inicio.style.display = "block";
-        modal_inicio.style.zIndex = "100";
+      // if (mensaje['respuesta'] == "existe") {
+      //   modal_mensaje.innerHTML = " el coreo electronico ya exuiste ";
+      //   modal_inicio.style.display = "block";
+      //   modal_inicio.style.zIndex = "100";
 
 
-      } else if (mensaje['respuesta'] == "error") {
+      // } else if (mensaje['respuesta'] == "error") {
 
-      } else if (mensaje['respuesta'] == "ok") {
-        modal_inicio.style.display = "block";
-        modal_inicio.style.zIndex = "100";
-        modal_mensaje.innerHTML = mensaje['clave'];
-        let btn_descargar = document.querySelector(".btn_descargar");
-        console.log(btn_descargar);
-        btn_descargar.addEventListener("click", function(argument) {
-          const download = (path, filename) => {
-            // Create a new link
-            const anchor = document.createElement('a');
-            anchor.href = path;
-            anchor.download = filename;
+      // } else if (mensaje['respuesta'] == "ok") {
+      //   modal_inicio.style.display = "block";
+      //   modal_inicio.style.zIndex = "100";
+      //   modal_mensaje.innerHTML = mensaje['clave'];
+      //   let btn_descargar = document.querySelector(".btn_descargar");
+      //   console.log(btn_descargar);
+      //   btn_descargar.addEventListener("click", function(argument) {
+      //     const download = (path, filename) => {
+      //       // Create a new link
+      //       const anchor = document.createElement('a');
+      //       anchor.href = path;
+      //       anchor.download = filename;
 
-            // Append to the DOM
-            document.body.appendChild(anchor);
+      //       // Append to the DOM
+      //       document.body.appendChild(anchor);
 
-            // Trigger `click` event
-            anchor.click();
+      //       // Trigger `click` event
+      //       anchor.click();
 
-            // Remove element from DOM
-            document.body.removeChild(anchor);
-          };
+      //       // Remove element from DOM
+      //       document.body.removeChild(anchor);
+      //     };
 
-          // Example download
-          download('./archivo/usuario/' + mensaje['clave'] + '/clave/clave.txt', 'clave.txt');
-        });
-      }
+      //     // Example download
+      //     download('./archivo/usuario/' + mensaje['clave'] + '/clave/clave.txt', 'clave.txt');
+      //   });
+      // }
 
     });
   }

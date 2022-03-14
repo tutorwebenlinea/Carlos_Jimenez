@@ -1,23 +1,46 @@
-console.log('validacion.js');
+console.log('inicio.js');
 
-function valida_campos_registro(argument) {
-  let txt_registro = document.querySelectorAll(".registro .txt");
-  let campoVacio = 0;
-  for (var i = 0; i < txt_registro.length; i++) {
-    // console.log(txt_registro[i].value);
-    if (txt_registro[i].value == "" || txt_registro[i].value.length == 0) {
-      // console.log('vacio');
-      console.log("El campo " + txt_registro[i].getAttribute("name") + " esta vacio");
-      campoVacio++;
-    } else {
-      console.log("El campo " + txt_registro[i].getAttribute("name") + " esta lleno");
-    }
-    // console.log(txt_registro);
-  }
+function valida_campos_inicio(argument) {
 
-  if (campoVacio == 0) {
-    return true;
-  } else {
-    return false;
-  }
+  let input_correo = document.querySelector(".inicio .input_correo");
+  let input_pass = document.querySelector(".inicio .input_pass");
+  let btn_inicio = document.querySelector(".inicio .btn_inicio");
+
+  console.log(input_correo);
+  console.log(input_pass);
+  console.log(btn_inicio);
+
+  btn_inicio.addEventListener("click", function(argument) {
+    argument.preventDefault();
+    let formData = new FormData();
+
+    formData.append("user", input_correo.value);
+    formData.append("pass", input_pass.value.trim());
+
+    let datos = formData;
+
+    $.ajax({
+        url: './php/inicio/inicio.php',
+        type: 'POST',
+        data: datos,
+        contentType: false,
+        cache: false,
+        processData: false,
+      })
+      .done(function() {
+        console.log("success");
+      })
+      .fail(function() {
+        console.log("error");
+      })
+      .always(function(res) {
+        console.log("complete");
+
+        console.log(res);
+      });
+
+  });
+
+
+
 }

@@ -13,7 +13,8 @@ function altaUsuario($nombre, $usuario, $correo, $pass)
     $token = openssl_random_pseudo_bytes(300);
 
 //Convert the binary data into hexadecimal representation.
-    $token = bin2hex($token);
+    $token     = bin2hex($token);
+    $user_pass = password_hash($pass, PASSWORD_DEFAULT);
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         // set the PDO error mode to exception
@@ -22,11 +23,11 @@ function altaUsuario($nombre, $usuario, $correo, $pass)
         // prepare sql and bind parameters
 
         $stmt = $conn->prepare("INSERT INTO usuario (nombre, usuario, email, pass, clave)
-                VALUES (:nombre , :usuario, :correo,  :pass, :token)");
+                VALUES (:nombre , :usuario, :correo, :pass, :token)");
         $stmt->bindParam(':nombre', $nombre, PDO::PARAM_STR);
         $stmt->bindParam(':usuario', $usuario, PDO::PARAM_STR);
         $stmt->bindParam(':correo', $correo, PDO::PARAM_STR);
-        $stmt->bindParam(':pass', $pass, PDO::PARAM_STR);
+        $stmt->bindParam(':pass', $user_pass, PDO::PARAM_STR);
         $stmt->bindParam(':token', $token, PDO::PARAM_STR);
 
         $stmt1 = $conn->prepare("SELECT * FROM usuario WHERE idusuario = :idusuario");
@@ -73,7 +74,7 @@ function validaMail($nombre, $usuario, $correo, $pass)
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare("SELECT * FROM usuario WHERE email ='{$correo}'");
+        $stmt = $conn->prepare("SELECT * FROM usuario WHERE email ='{$correo}' OR usuario ='{$usuario}'");
         $stmt->execute();
         $count = $stmt->rowCount();
         if ($count == 0) {
@@ -90,14 +91,23 @@ function validaMail($nombre, $usuario, $correo, $pass)
     }
 }
 
-function generaHash($pass)
-{
-    return password_hash($pass, PASSWORD_DEFAULT);
-}
+// function generaHash($pass)
+// {
+//     return password_hash($pass);
+// }
 
 $nombre  = $_POST['nombre'];
 $usuario = $_POST['usuario'];
 $correo  = $_POST['correo'];
-$pass    = generaHash($_POST['pass']);
+$pass    = $_POST['pass'];
+
+echo $nombre;
+echo "\n";
+echo $usuario;
+echo "\n";
+echo $correo;
+echo "\n";
+echo $pass;
+echo "\n";
 
 validaMail($nombre, $usuario, $correo, $pass);

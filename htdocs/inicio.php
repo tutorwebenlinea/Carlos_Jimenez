@@ -1,3 +1,3 @@
 <?php
 
-include "./comp/inicio/comp..php";
+include "./usuario/comp/inicio/comp.php";
