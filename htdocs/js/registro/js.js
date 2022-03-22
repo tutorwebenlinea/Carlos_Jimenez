@@ -102,43 +102,43 @@ function registro(argument) {
 
       console.log(resultado);
 
-      // let mensaje = JSON.parse(resultado);
+      let mensaje = JSON.parse(resultado);
 
-      // if (mensaje['respuesta'] == "existe") {
-      //   modal_mensaje.innerHTML = " el coreo electronico ya exuiste ";
-      //   modal_inicio.style.display = "block";
-      //   modal_inicio.style.zIndex = "100";
+      if (mensaje['respuesta'] == "existe") {
+        modal_mensaje.innerHTML = " el coreo electronico ya exuiste ";
+        modal_inicio.style.display = "block";
+        modal_inicio.style.zIndex = "100";
 
 
-      // } else if (mensaje['respuesta'] == "error") {
+      } else if (mensaje['respuesta'] == "error") {
 
-      // } else if (mensaje['respuesta'] == "ok") {
-      //   modal_inicio.style.display = "block";
-      //   modal_inicio.style.zIndex = "100";
-      //   modal_mensaje.innerHTML = mensaje['clave'];
-      //   let btn_descargar = document.querySelector(".btn_descargar");
-      //   console.log(btn_descargar);
-      //   btn_descargar.addEventListener("click", function(argument) {
-      //     const download = (path, filename) => {
-      //       // Create a new link
-      //       const anchor = document.createElement('a');
-      //       anchor.href = path;
-      //       anchor.download = filename;
+      } else if (mensaje['respuesta'] == "ok") {
+        modal_inicio.style.display = "block";
+        modal_inicio.style.zIndex = "100";
+        modal_mensaje.innerHTML = mensaje['clave'];
+        let btn_descargar = document.querySelector(".btn_descargar");
+        console.log(btn_descargar);
+        btn_descargar.addEventListener("click", function(argument) {
+          const download = (path, filename) => {
+            // Create a new link
+            const anchor = document.createElement('a');
+            anchor.href = path;
+            anchor.download = filename;
 
-      //       // Append to the DOM
-      //       document.body.appendChild(anchor);
+            // Append to the DOM
+            document.body.appendChild(anchor);
 
-      //       // Trigger `click` event
-      //       anchor.click();
+            // Trigger `click` event
+            anchor.click();
 
-      //       // Remove element from DOM
-      //       document.body.removeChild(anchor);
-      //     };
+            // Remove element from DOM
+            document.body.removeChild(anchor);
+          };
 
-      //     // Example download
-      //     download('./archivo/usuario/' + mensaje['clave'] + '/clave/clave.txt', 'clave.txt');
-      //   });
-      // }
+          // Example download
+          download('./archivo/usuario/' + mensaje['clave'] + '/clave/clave.txt', 'clave.txt');
+        });
+      }
 
     });
   }

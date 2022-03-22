@@ -8,7 +8,9 @@ function deleteDirectory($dir)
 
     while (false !== ($current = readdir($dh))) {
         if ($current != '.' && $current != '..') {
+
             echo 'Se ha borrado el archivo ' . $dir . '/' . $current . '<br/>';
+
             if (!@unlink($dir . '/' . $current)) {
                 deleteDirectory($dir . '/' . $current);
             }

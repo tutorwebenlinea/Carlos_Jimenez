@@ -101,13 +101,13 @@ $usuario = $_POST['usuario'];
 $correo  = $_POST['correo'];
 $pass    = $_POST['pass'];
 
-echo $nombre;
-echo "\n";
-echo $usuario;
-echo "\n";
-echo $correo;
-echo "\n";
-echo $pass;
-echo "\n";
+// echo $nombre;
+// echo "\n";
+// echo $usuario;
+// echo "\n";
+// echo $correo;
+// echo "\n";
+// echo $pass;
+// echo "\n";
 
 validaMail($nombre, $usuario, $correo, $pass);

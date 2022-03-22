@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-=======
-let textarea = document.getElementsByTagName("textarea");
+let crear_emporesa = document.getElementById("crear_emporesa");
 
-for (var i = 0; i < textarea.length; i++) {
-   textarea[i].textContent = "";
-}
+let btn_crear_emporesa = document.querySelector(".crear_empresa");
 
->>>>>>> 4e2fa722cb07887d5c172ad9a7032f265b16857c
-console.log('ok');
+btn_crear_emporesa.addEventListener("click", function(argument) {
+  argument.preventDefault();
+  crear_emporesa.style.display = "block";
+});

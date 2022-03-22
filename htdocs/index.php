@@ -18,7 +18,7 @@
       <h4>
         Crear Empresa
       </h4>
-      <button class="w3-button w3-circle w3-green" type="submit">
+      <button class="w3-button w3-circle w3-green crear_empresa" type="submit">
         <a href="./crear_empresa.php">
           +
         </a>
@@ -48,5 +48,28 @@
         +
       </button>
     </div>
+    <!-- The Modal -->
+    <div class="w3-modal" id="crear_emporesa">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span class="w3-button w3-display-topright" onclick="document.getElementById('crear_emporesa').style.display='none'">
+            ×
+          </span>
+          <div class="w3-container w3-green">
+            <h2>
+              Header
+            </h2>
+          </div>
+          <form class="w3-container">
+            <label>
+              Nombrer de la empresa
+            </label>
+            <input class="w3-input" type="text"/>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./js/crear_empresa/js.js" type="text/javascript">
+    </script>
   </body>
 </html>
