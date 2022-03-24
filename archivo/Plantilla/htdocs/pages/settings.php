@@ -90,6 +90,7 @@
             alt="Bonnie Green">
         </div>
         <div class="d-block">
+
           <h2 class="h5 mb-3">Hi, Jane</h2>
           <a href="./pages/examples/sign-in.html" class="btn btn-secondary btn-sm d-inline-flex align-items-center">
             <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
@@ -119,6 +120,7 @@
           <span class="sidebar-icon">
             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
           </span>
+
           <span class="sidebar-text">Dashboard</span>
         </a>
       </li>
@@ -509,6 +511,11 @@
 
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
                 <div>
+
+                                      <?php if (isset($_GET["url"])) {
+    $parameto = explode("/", $_GET["url"]);
+    echo "{$parameto[0]}";
+}?>
                     <div class="dropdown">
                         <button class="btn btn-secondary d-inline-flex align-items-center me-2 dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>

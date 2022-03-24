@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Primary Meta Tags -->
 <title>Volt Free Bootstrap Dashboard - Transactions</title>
@@ -44,22 +44,22 @@
 <meta property="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
 
 <!-- Favicon -->
-<link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
-<link rel="manifest" href="../assets/img/favicon/site.webmanifest">
-<link rel="mask-icon" href="../assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+<link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+<link rel="mask-icon" href="./assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 
 <!-- Sweet Alert -->
-<link type="text/css" href="../vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+<link type="text/css" href="./vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
 
 <!-- Notyf -->
-<link type="text/css" href="../vendor/notyf/notyf.min.css" rel="stylesheet">
+<link type="text/css" href="./vendor/notyf/notyf.min.css" rel="stylesheet">
 
 <!-- Volt CSS -->
-<link type="text/css" href="../css/volt.css" rel="stylesheet">
+<link type="text/css" href="./css/volt.css" rel="stylesheet">
 
 <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
 
@@ -68,11 +68,11 @@
 <body>
 
         <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
-        
+
 
         <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
-    <a class="navbar-brand me-lg-5" href="../index.html">
-        <img class="navbar-brand-dark" src="../assets/img/brand/light.svg" alt="Volt logo" /> <img class="navbar-brand-light" src="../assets/img/brand/dark.svg" alt="Volt logo" />
+    <a class="navbar-brand me-lg-5" href="./index.html">
+        <img class="navbar-brand-dark" src="./assets/img/brand/light.svg" alt="Volt logo" /> <img class="navbar-brand-light" src="./assets/img/brand/dark.svg" alt="Volt logo" />
     </a>
     <div class="d-flex align-items-center">
         <button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,13 +86,13 @@
     <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
       <div class="d-flex align-items-center">
         <div class="avatar-lg me-4">
-          <img src="../assets/img/team/profile-picture-3.jpg" class="card-img-top rounded-circle border-white"
+          <img src="./assets/img/team/profile-picture-3.jpg" class="card-img-top rounded-circle border-white"
             alt="Bonnie Green">
         </div>
         <div class="d-block">
           <h2 class="h5 mb-3">Hi, Jane</h2>
-          <a href="../pages/examples/sign-in.html" class="btn btn-secondary btn-sm d-inline-flex align-items-center">
-            <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>            
+          <a href="./pages/examples/sign-in.html" class="btn btn-secondary btn-sm d-inline-flex align-items-center">
+            <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
             Sign Out
           </a>
         </div>
@@ -107,18 +107,18 @@
     </div>
     <ul class="nav flex-column pt-3 pt-md-0">
       <li class="nav-item">
-        <a href="../index.html" class="nav-link d-flex align-items-center">
+        <a href="./index.html" class="nav-link d-flex align-items-center">
           <span class="sidebar-icon">
-            <img src="../assets/img/brand/light.svg" height="20" width="20" alt="Volt Logo">
+            <img src="./assets/img/brand/light.svg" height="20" width="20" alt="Volt Logo">
           </span>
           <span class="mt-1 ms-1 sidebar-text">Volt Overview</span>
         </a>
       </li>
       <li class="nav-item ">
-        <a href="../pages/dashboard/dashboard.html" class="nav-link">
+        <a href="./pages/dashboard/dashboard.html" class="nav-link">
           <span class="sidebar-icon">
             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
-          </span> 
+          </span>
           <span class="sidebar-text">Dashboard</span>
         </a>
       </li>
@@ -136,7 +136,7 @@
         </a>
       </li>
       <li class="nav-item  active ">
-        <a href="../pages/transactions.html" class="nav-link">
+        <a href="./pages/transactions.html" class="nav-link">
           <span class="sidebar-icon">
             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path></svg>
           </span>
@@ -144,7 +144,7 @@
         </a>
       </li>
       <li class="nav-item ">
-        <a href="../pages/settings.html" class="nav-link">
+        <a href="./pages/settings.html" class="nav-link">
           <span class="sidebar-icon">
             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
           </span>
@@ -184,7 +184,7 @@
           <span>
             <span class="sidebar-icon">
               <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z" clip-rule="evenodd"></path></svg>
-            </span> 
+            </span>
             <span class="sidebar-text">Tables</span>
           </span>
           <span class="link-arrow">
@@ -195,7 +195,7 @@
           role="list" id="submenu-app" aria-expanded="false">
           <ul class="flex-column nav">
             <li class="nav-item ">
-              <a class="nav-link" href="../pages/tables/bootstrap-tables.html">
+              <a class="nav-link" href="./pages/tables/bootstrap-tables.html">
                 <span class="sidebar-text">Bootstrap Tables</span>
               </a>
             </li>
@@ -209,7 +209,7 @@
           <span>
             <span class="sidebar-icon">
               <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"></path><path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
-            </span> 
+            </span>
             <span class="sidebar-text">Page examples</span>
           </span>
           <span class="link-arrow">
@@ -220,37 +220,37 @@
           id="submenu-pages" aria-expanded="false">
           <ul class="flex-column nav">
             <li class="nav-item">
-              <a class="nav-link" href="../pages/examples/sign-in.html">
+              <a class="nav-link" href="./pages/examples/sign-in.html">
                 <span class="sidebar-text">Sign In</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/examples/sign-up.html">
+              <a class="nav-link" href="./pages/examples/sign-up.html">
                 <span class="sidebar-text">Sign Up</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/examples/forgot-password.html">
+              <a class="nav-link" href="./pages/examples/forgot-password.html">
                 <span class="sidebar-text">Forgot password</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/examples/reset-password.html">
+              <a class="nav-link" href="./pages/examples/reset-password.html">
                 <span class="sidebar-text">Reset password</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/examples/lock.html">
+              <a class="nav-link" href="./pages/examples/lock.html">
                 <span class="sidebar-text">Lock</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/examples/404.html">
+              <a class="nav-link" href="./pages/examples/404.html">
                 <span class="sidebar-text">404 Not Found</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/examples/500.html">
+              <a class="nav-link" href="./pages/examples/500.html">
                 <span class="sidebar-text">500 Not Found</span>
               </a>
             </li>
@@ -264,7 +264,7 @@
           <span>
             <span class="sidebar-icon">
               <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path><path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-            </span> 
+            </span>
             <span class="sidebar-text">Components</span>
           </span>
           <span class="link-arrow">
@@ -281,27 +281,27 @@
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="../pages/components/buttons.html">
+              <a class="nav-link" href="./pages/components/buttons.html">
                 <span class="sidebar-text">Buttons</span>
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="../pages/components/notifications.html">
+              <a class="nav-link" href="./pages/components/notifications.html">
                 <span class="sidebar-text">Notifications</span>
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="../pages/components/forms.html">
+              <a class="nav-link" href="./pages/components/forms.html">
                 <span class="sidebar-text">Forms</span>
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="../pages/components/modals.html">
+              <a class="nav-link" href="./pages/components/modals.html">
                 <span class="sidebar-text">Modals</span>
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="../pages/components/typography.html">
+              <a class="nav-link" href="./pages/components/typography.html">
                 <span class="sidebar-text">Typography</span>
               </a>
             </li>
@@ -321,24 +321,24 @@
       <li class="nav-item">
         <a href="https://themesberg.com" target="_blank" class="nav-link d-flex align-items-center">
           <span class="sidebar-icon">
-            <img src="../assets/img/themesberg.svg" height="20" width="28" alt="Themesberg Logo">
+            <img src="./assets/img/themesberg.svg" height="20" width="28" alt="Themesberg Logo">
           </span>
           <span class="sidebar-text">Themesberg</span>
         </a>
       </li>
       <li class="nav-item">
-        <a href="../pages/upgrade-to-pro.html"
+        <a href="./pages/upgrade-to-pro.html"
           class="btn btn-secondary d-flex align-items-center justify-content-center btn-upgrade-pro">
           <span class="sidebar-icon d-inline-flex align-items-center justify-content-center">
             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path></svg>
-          </span> 
+          </span>
           <span>Upgrade to Pro</span>
         </a>
       </li>
     </ul>
   </div>
 </nav>
-    
+
         <main class="content">
 
             <nav class="navbar navbar-top navbar-expand navbar-dashboard navbar-dark ps-0 pe-2 pb-0">
@@ -371,7 +371,7 @@
                 <div class="row align-items-center">
                     <div class="col-auto">
                       <!-- Avatar -->
-                      <img alt="Image placeholder" src="../assets/img/team/profile-picture-1.jpg" class="avatar-md rounded">
+                      <img alt="Image placeholder" src="./assets/img/team/profile-picture-1.jpg" class="avatar-md rounded">
                     </div>
                     <div class="col ps-0 ms-2">
                       <div class="d-flex justify-content-between align-items-center">
@@ -390,7 +390,7 @@
                 <div class="row align-items-center">
                     <div class="col-auto">
                       <!-- Avatar -->
-                      <img alt="Image placeholder" src="../assets/img/team/profile-picture-2.jpg" class="avatar-md rounded">
+                      <img alt="Image placeholder" src="./assets/img/team/profile-picture-2.jpg" class="avatar-md rounded">
                     </div>
                     <div class="col ps-0 ms-2">
                       <div class="d-flex justify-content-between align-items-center">
@@ -409,7 +409,7 @@
                 <div class="row align-items-center">
                     <div class="col-auto">
                       <!-- Avatar -->
-                      <img alt="Image placeholder" src="../assets/img/team/profile-picture-3.jpg" class="avatar-md rounded">
+                      <img alt="Image placeholder" src="./assets/img/team/profile-picture-3.jpg" class="avatar-md rounded">
                     </div>
                     <div class="col ps-0 m-2">
                       <div class="d-flex justify-content-between align-items-center">
@@ -428,7 +428,7 @@
                 <div class="row align-items-center">
                     <div class="col-auto">
                       <!-- Avatar -->
-                      <img alt="Image placeholder" src="../assets/img/team/profile-picture-4.jpg" class="avatar-md rounded">
+                      <img alt="Image placeholder" src="./assets/img/team/profile-picture-4.jpg" class="avatar-md rounded">
                     </div>
                     <div class="col ps-0 ms-2">
                       <div class="d-flex justify-content-between align-items-center">
@@ -447,7 +447,7 @@
                 <div class="row align-items-center">
                     <div class="col-auto">
                       <!-- Avatar -->
-                      <img alt="Image placeholder" src="../assets/img/team/profile-picture-5.jpg" class="avatar-md rounded">
+                      <img alt="Image placeholder" src="./assets/img/team/profile-picture-5.jpg" class="avatar-md rounded">
                     </div>
                     <div class="col ps-0 ms-2">
                       <div class="d-flex justify-content-between align-items-center">
@@ -472,7 +472,7 @@
         <li class="nav-item dropdown ms-lg-3">
           <a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <div class="media d-flex align-items-center">
-              <img class="avatar rounded-circle" alt="Image placeholder" src="../assets/img/team/profile-picture-3.jpg">
+              <img class="avatar rounded-circle" alt="Image placeholder" src="./assets/img/team/profile-picture-3.jpg">
               <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
                 <span class="mb-0 font-small fw-bold text-gray-900">Bonnie Green</span>
               </div>
@@ -497,7 +497,7 @@
             </a>
             <div role="separator" class="dropdown-divider my-1"></div>
             <a class="dropdown-item d-flex align-items-center" href="#">
-              <svg class="dropdown-icon text-danger me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>                
+              <svg class="dropdown-icon text-danger me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
               Logout
             </a>
           </div>
@@ -567,7 +567,7 @@
                     <thead>
                         <tr>
                             <th class="border-gray-200">#</th>
-                            <th class="border-gray-200">Bill For</th>						
+                            <th class="border-gray-200">Bill For</th>
                             <th class="border-gray-200">Issue Date</th>
                             <th class="border-gray-200">Due Date</th>
                             <th class="border-gray-200">Total</th>
@@ -586,7 +586,7 @@
                             <td>
                                 <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="fw-normal">1 May 2020</span></td>                        
+                            <td><span class="fw-normal">1 May 2020</span></td>
                             <td><span class="fw-normal">1 Jun 2020</span></td>
                             <td><span class="fw-bold">$799,00</span></td>
                             <td><span class="fw-bold text-warning">Due</span></td>
@@ -616,7 +616,7 @@
                             <td>
                                 <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="fw-normal">1 Apr 2020</span></td>                        
+                            <td><span class="fw-normal">1 Apr 2020</span></td>
                             <td><span class="fw-normal">1 May 2020</span></td>
                             <td><span class="fw-bold">$799,00</span></td>
                             <td><span class="fw-bold text-success">Paid</span></td>
@@ -635,7 +635,7 @@
                                     </div>
                                 </div>
                             </td>
-                        </tr> 
+                        </tr>
                         <!-- Item -->
                         <tr>
                             <td>
@@ -646,7 +646,7 @@
                             <td>
                                 <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="fw-normal">1 Mar 2020</span></td>                        
+                            <td><span class="fw-normal">1 Mar 2020</span></td>
                             <td><span class="fw-normal">1 Apr 2020</span></td>
                             <td><span class="fw-bold">$799,00</span></td>
                             <td><span class="fw-bold text-success">Paid</span></td>
@@ -665,7 +665,7 @@
                                     </div>
                                 </div>
                             </td>
-                        </tr> 
+                        </tr>
                         <!-- Item -->
                         <tr>
                             <td>
@@ -676,7 +676,7 @@
                             <td>
                                 <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="fw-normal">1 Feb 2020</span></td>                        
+                            <td><span class="fw-normal">1 Feb 2020</span></td>
                             <td><span class="fw-normal">1 Mar 2020</span></td>
                             <td><span class="fw-bold">$799,00</span></td>
                             <td><span class="fw-bold text-success">Paid</span></td>
@@ -695,7 +695,7 @@
                                     </div>
                                 </div>
                             </td>
-                        </tr> 
+                        </tr>
                         <!-- Item -->
                         <tr>
                             <td>
@@ -706,7 +706,7 @@
                             <td>
                                 <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="fw-normal">1 Jan 2020</span></td>                        
+                            <td><span class="fw-normal">1 Jan 2020</span></td>
                             <td><span class="fw-normal">1 Feb 2020</span></td>
                             <td><span class="fw-bold">$799,00</span></td>
                             <td><span class="fw-bold text-success">Paid</span></td>
@@ -725,7 +725,7 @@
                                     </div>
                                 </div>
                             </td>
-                        </tr> 
+                        </tr>
                         <!-- Item -->
                         <tr>
                             <td>
@@ -736,7 +736,7 @@
                             <td>
                                 <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="fw-normal">1 Dec 2019</span></td>                        
+                            <td><span class="fw-normal">1 Dec 2019</span></td>
                             <td><span class="fw-normal">1 Jan 2020</span></td>
                             <td><span class="fw-bold">$799,00</span></td>
                             <td><span class="fw-bold text-success">Paid</span></td>
@@ -755,7 +755,7 @@
                                     </div>
                                 </div>
                             </td>
-                        </tr> 
+                        </tr>
                         <!-- Item -->
                         <!-- Item -->
                         <tr>
@@ -767,7 +767,7 @@
                             <td>
                                 <span class="fw-normal">Platinum Subscription Plan</span>
                             </td>
-                            <td><span class="fw-normal">1 Nov 2019</span></td>                        
+                            <td><span class="fw-normal">1 Nov 2019</span></td>
                             <td><span class="fw-normal">1 Dec 2019</span></td>
                             <td><span class="fw-bold">$799,00</span></td>
                             <td><span class="fw-bold text-success">Paid</span></td>
@@ -786,7 +786,7 @@
                                     </div>
                                 </div>
                             </td>
-                        </tr> 
+                        </tr>
                         <!-- Item -->
                         <tr>
                             <td>
@@ -797,7 +797,7 @@
                             <td>
                                 <span class="fw-normal">Gold Subscription Plan</span>
                             </td>
-                            <td><span class="fw-normal">1 Oct 2019</span></td>                        
+                            <td><span class="fw-normal">1 Oct 2019</span></td>
                             <td><span class="fw-normal">1 Nov 2019</span></td>
                             <td><span class="fw-bold">$533,42</span></td>
                             <td><span class="fw-bold text-danger">Cancelled</span></td>
@@ -827,7 +827,7 @@
                             <td>
                                 <span class="fw-normal">Gold Subscription Plan</span>
                             </td>
-                            <td><span class="fw-normal">1 Sep 2019</span></td>                        
+                            <td><span class="fw-normal">1 Sep 2019</span></td>
                             <td><span class="fw-normal">1 Oct 2019</span></td>
                             <td><span class="fw-bold">$533,42</span></td>
                             <td><span class="fw-bold text-success">Paid</span></td>
@@ -846,7 +846,7 @@
                                     </div>
                                 </div>
                             </td>
-                        </tr>    
+                        </tr>
                         <!-- Item -->
                         <tr>
                             <td>
@@ -857,7 +857,7 @@
                             <td>
                                 <span class="fw-normal">Flexible Subscription Plan</span>
                             </td>
-                            <td><span class="fw-normal">1 Aug 2019</span></td>                        
+                            <td><span class="fw-normal">1 Aug 2019</span></td>
                             <td><span class="fw-normal">1 Sep 2019</span></td>
                             <td><span class="fw-bold">$233,42</span></td>
                             <td><span class="fw-bold text-success">Paid</span></td>
@@ -876,7 +876,7 @@
                                     </div>
                                 </div>
                             </td>
-                        </tr>                                
+                        </tr>
                     </tbody>
                 </table>
                 <div class="card-footer px-3 border-0 d-flex flex-column flex-lg-row align-items-center justify-content-between">
@@ -921,17 +921,17 @@
         </div>
         <a href="https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard" target="_blank"
             class="btn btn-secondary d-inline-flex align-items-center justify-content-center mb-3 w-100">
-            Download 
+            Download
             <svg class="icon icon-xs ms-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z" clip-rule="evenodd"></path></svg>
         </a>
         <p class="fs-7 text-gray-300 text-center">Available in the following technologies:</p>
         <div class="d-flex justify-content-center">
             <a class="me-3" href="https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard"
                 target="_blank">
-                <img src="../assets/img/technologies/bootstrap-5-logo.svg" class="image image-xs">
+                <img src="./assets/img/technologies/bootstrap-5-logo.svg" class="image image-xs">
             </a>
             <a href="https://demo.themesberg.com/volt-react-dashboard/#/" target="_blank">
-                <img src="../assets/img/technologies/react-logo.svg" class="image image-xs">
+                <img src="./assets/img/technologies/react-logo.svg" class="image image-xs">
             </a>
         </div>
     </div>
@@ -973,47 +973,47 @@
         </main>
 
     <!-- Core -->
-<script src="../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
-<script src="../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./vendor/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="./vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- Vendor JS -->
-<script src="../vendor/onscreen/dist/on-screen.umd.min.js"></script>
+<script src="./vendor/onscreen/dist/on-screen.umd.min.js"></script>
 
 <!-- Slider -->
-<script src="../vendor/nouislider/distribute/nouislider.min.js"></script>
+<script src="./vendor/nouislider/distribute/nouislider.min.js"></script>
 
 <!-- Smooth scroll -->
-<script src="../vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="./vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
 <!-- Charts -->
-<script src="../vendor/chartist/dist/chartist.min.js"></script>
-<script src="../vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+<script src="./vendor/chartist/dist/chartist.min.js"></script>
+<script src="./vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
 
 <!-- Datepicker -->
-<script src="../vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+<script src="./vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
 
 <!-- Sweet Alerts 2 -->
-<script src="../vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="./vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
 
 <!-- Moment JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 
 <!-- Vanilla JS Datepicker -->
-<script src="../vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+<script src="./vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
 
 <!-- Notyf -->
-<script src="../vendor/notyf/notyf.min.js"></script>
+<script src="./vendor/notyf/notyf.min.js"></script>
 
 <!-- Simplebar -->
-<script src="../vendor/simplebar/dist/simplebar.min.js"></script>
+<script src="./vendor/simplebar/dist/simplebar.min.js"></script>
 
 <!-- Github buttons -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 <!-- Volt JS -->
-<script src="../assets/js/volt.js"></script>
+<script src="./assets/js/volt.js"></script>
 
-    
+
 </body>
 
 </html>
