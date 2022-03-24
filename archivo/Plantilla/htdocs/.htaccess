@@ -3,4 +3,5 @@ RewriteEngine On
 
 
 
-RewriteRule ^([a-zA-Z0-9/]+)$ index.php?var=$1
+RewriteRule ^([a-zA-Z0-9/]+)$  index.php?url=$1&metodo=$2&accion=$3&id=$4
+
