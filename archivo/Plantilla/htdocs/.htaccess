@@ -1,7 +1,5 @@
-Options +FollowSymLinks
-RewriteEngine On
+RewriteEngine on
+RewriteRule ^([a-zA-Z0-9/]*)$ index.php?url=$1
 
-
-
-RewriteRule ^([a-zA-Z0-9/]+)$  index.php?url=$1&metodo=$2&accion=$3&id=$4
+Options All -Indexes
 
