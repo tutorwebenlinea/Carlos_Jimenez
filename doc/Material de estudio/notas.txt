@@ -1,0 +1,252 @@
+Ejercicios de practica para las secciones de asesoría. 
+
+PHP Install
+PHP Syntax
+PHP Comments
+PHP Variables
+PHP Echo / Print
+PHP Data Types
+PHP Strings
+PHP Numbers
+PHP Math
+PHP Constants
+PHP Operators
+PHP If...Else...Elseif
+PHP Switch
+PHP Loops
+PHP Functions
+PHP Arrays
+PHP Superglobals
+PHP RegEx
+
+PHP Forms
+PHP Form Handling
+PHP Form Validation
+PHP Form Required
+PHP Form URL/E-mail
+PHP Form Complete
+
+PHP Advanced
+PHP Date and Time
+PHP Include
+PHP File Handling
+PHP File Open/Read
+PHP File Create/Write
+PHP File Upload
+PHP Cookies
+PHP Sessions
+PHP Filters
+PHP Filters Advanced
+PHP Callback Functions
+PHP JSON
+PHP Exceptions
+
+PHP OOP
+PHP What is OOP
+PHP Classes/Objects
+PHP Constructor
+PHP Destructor
+PHP Access Modifiers
+PHP Inheritance
+PHP Constants
+PHP Abstract Classes
+PHP Interfaces
+PHP Traits
+PHP Static Methods
+PHP Static Properties
+PHP Namespaces
+PHP Iterables
+
+MySQL Database
+MySQL Database
+MySQL Connect
+MySQL Create DB
+MySQL Create Table
+MySQL Insert Data
+MySQL Get Last ID
+MySQL Insert Multiple
+MySQL Prepared
+MySQL Select Data
+MySQL Where
+MySQL Order By
+MySQL Delete Data
+MySQL Update Data
+MySQL Limit Data
+
+
+PHP - AJAX
+AJAX Intro
+AJAX PHP
+AJAX Database
+AJAX XML
+AJAX Live Search
+AJAX Poll
+
+
+PHP Array
+PHP Calendar
+PHP Date
+PHP Directory
+PHP Error
+PHP Exception
+PHP Filesystem
+PHP Filter
+PHP FTP
+PHP JSON
+PHP Keywords
+PHP Mail
+PHP Math
+PHP Misc
+PHP MySQLi
+PHP Network
+PHP Output Control
+PHP RegEx
+PHP Stream
+PHP String
+PHP Variable Handling
+PHP Zip
+PHP Timezones
+
+
+--------------------
+https://www.tutorialspoint.com/php/index.htm
+
+    PHP - Home
+    PHP - Introduction
+    PHP - Environment Setup
+    PHP - Syntax Overview
+    PHP - Variable Types
+    PHP - Constants
+    PHP - Operator Types
+    PHP - Decision Making
+    PHP - Loop Types
+    PHP - Arrays
+    PHP - Strings
+    PHP - Web Concepts
+    PHP - GET & POST
+    PHP - File Inclusion
+    PHP - Files & I/O
+    PHP - Functions
+    PHP - Cookies
+    PHP - Sessions
+    PHP - Sending Emails
+    PHP - File Uploading
+    PHP - Coding Standard
+
+    Advanced PHP
+    PHP - Predefined Variables
+    PHP - Regular Expression
+    PHP - Error Handling
+    PHP - Bugs Debugging
+    PHP - Date & Time
+    PHP & MySQL
+    PHP & AJAX
+    PHP & XML
+    PHP - Object Oriented
+    PHP - For C Developers
+    PHP - For PERL Developers
+
+    PHP Form Examples
+    PHP - Form Introduction
+    PHP - Validation Example
+    PHP - Complete Form
+
+    PHP login Examples
+    PHP - Login Example
+    PHP - Facebook Login
+    PHP - Paypal Integration
+    PHP - MySQL Login
+
+    PHP AJAX Examples
+    PHP - AJAX Search
+    PHP - AJAX XML Parser
+    PHP - AJAX Auto Complete Search
+    PHP - AJAX RSS Feed Example
+
+    PHP XML Example
+    PHP - XML Introduction
+    PHP - Simple XML
+    PHP - Simple XML GET
+    PHP - SAX Parser Example
+    PHP - DOM Parser Example
+
+    PHP Frame Works
+    PHP - Frame Works
+    PHP - Core PHP vs Frame Works
+
+    PHP Design Patterns
+    PHP - Design Patterns
+
+    PHP Function Reference
+    PHP - Built-In Functions
+
+PHP - Inicio
+    PHP - Introducción
+    PHP - Configuración del entorno
+    PHP - Descripción general de la sintaxis
+    PHP - Tipos de variables
+    PHP - Constantes
+    PHP - Tipos de operadores
+    PHP - Toma de decisiones
+    PHP - Tipos de bucle
+    PHP - Matrices
+    PHP - cadenas
+    PHP - Conceptos web
+    PHP - Obtener y publicar
+    PHP - Inclusión de archivos
+    PHP - Archivos e I/O
+    PHP - Funciones
+    PHP - galletas
+    PHP - Sesiones
+    PHP - Enviar correos electrónicos
+    PHP - Carga de archivos
+    PHP - Estándar de codificación
+
+    PHP avanzado
+    PHP - Variables predefinidas
+    PHP - Expresión regular
+    PHP - Manejo de errores
+    PHP - Depuración de errores
+    Php - Fecha y hora
+    PHP y MySQL
+    PHP y AJAX
+    PHP y XML
+    PHP - Orientado a objetos
+    PHP - para desarrolladores de C
+    PHP - para desarrolladores de Perl
+
+    Ejemplos de formulario PHP
+    PHP - Introducción de formulario
+    PHP - Ejemplo de validación
+    PHP - Formulario completo
+
+    Ejemplos de inicio de sesión de PHP
+    PHP - Ejemplo de inicio de sesión
+    PHP - Inicio de sesión de Facebook
+    PHP - Integración de PayPal
+    PHP - MySQL Iniciar sesión
+
+    PHP AJAX EJEMPLOS
+    PHP - AJAX Search
+    PHP - AJAX XML PARSER
+    PHP - AJAX Auto Complete Search
+    PHP - Ejemplo de AJAX RSS Feed
+
+    Ejemplo de PHP XML
+    PHP - INTRODUCCIÓN XML
+    PHP - XML ​​simple
+    PHP - Simple XML Get
+    PHP - Ejemplo de analizador de saxo
+    PHP - EJEMPLO DE DOM PARSER
+
+    Funciona el marco de PHP
+    PHP - FRUCHA FUNCIONA
+    PHP - Core PHP vs Frame funciona
+
+    Patrones de diseño de PHP
+    PHP - Patrones de diseño
+
+    Referencia de función PHP
+    PHP - Funciones incorporadas
+
+    http://phptester.net/

@@ -1,0 +1,12 @@
+Documentacion_de_requisitos 
+Documentacion_de_diseño_de_Software
+Documentacion_tecnica 
+Documentacion_del_usuario
+
+Agregar:
+Corregir:
+Refactorización:
+Eliminar:
+Documentación:
+Modificación:
+Análisis:

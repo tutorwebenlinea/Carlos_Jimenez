@@ -1,0 +1,78 @@
+PHP comenzó como un pequeño proyecto de código abierto que evolucionó a medida que más y más personas descubrieron lo útil que era. Rasmus Lerdorf desató la primera versión de PHP en 1994.
+
+PHP es un acrónimo recursivo para "PHP: preprocesador de hipertexto".
+
+PHP es un lenguaje de secuencias de comandos del lado del servidor que está incrustado en HTML. Se utiliza para administrar contenido dinámico, bases de datos, seguimiento de sesiones e incluso construir sitios de comercio electrónico completos.
+
+
+
+Está integrado con una serie de bases de datos populares, incluidas MySQL, PostgreSQL, Oracle, Sybase, Informix y Microsoft SQL Server.
+
+PHP es agradablemente Zippy en su ejecución, especialmente cuando se compila como un módulo Apache en el lado UNIX. El servidor MySQL, una vez iniciado, ejecuta incluso consultas muy complejas con grandes conjuntos de resultados en el tiempo de registro.
+
+PHP admite una gran cantidad de protocolos importantes como POP3, IMAP y LDAP. PHP4 agregó soporte para Java y arquitecturas de objetos distribuidos (COM y CORBA), lo que hace que el desarrollo de N de nivel N sea una posibilidad por primera vez.
+
+    PHP es indulgente: el lenguaje de PHP intenta ser lo más indulgente posible.
+
+    La sintaxis PHP es similar a C.
+
+Usos comunes de PHP
+
+    PHP realiza funciones del sistema, es decir, desde archivos en un sistema que puede crear, abrir, leer, escribirlas y cerrarlas.
+
+    PHP puede manejar formularios, es decir, recopilar datos de los archivos, guardar datos en un archivo, por correo electrónico puede enviar datos, devolver datos al usuario.
+
+    Agrega, elimina, modifica elementos dentro de su base de datos a través de PHP.
+
+    Acceda a las variables de las cookies y establezca cookies.
+
+    Con PHP, puede restringir a los usuarios para acceder a algunas páginas de su sitio web.
+
+    Puede cifrar datos.
+
+Características de PHP
+
+Cinco características importantes hacen posible la naturaleza práctica de PHP -
+
+    Sencillez
+    Eficiencia
+    Seguridad
+    Flexibilidad
+    Familiaridad
+
+Script "Hola mundo" en PHP
+
+Para tener una idea de PHP, primero comience con scripts de PHP simples. Desde "¡Hola, mundo!" es un ejemplo esencial, primero crearemos un pequeño "¡Hola, mundo!" texto.
+
+Como se mencionó anteriormente, PHP está incrustado en HTML. Eso significa que en entre su HTML normal (o XHTML si está de vanguardia) tendrá declaraciones de PHP como esta-
+Demo en vivo
+
+<html>
+   
+   <Evista>
+      <title> Hello World </title>
+   </ablo)
+   
+   <Body>
+      <? Php echo "¡Hola, mundo!";>
+   </body>
+
+</html>
+
+Producirá el siguiente resultado -
+
+¡Hola Mundo!
+
+Si examina la salida HTML del ejemplo anterior, notará que el código PHP no está presente en el archivo enviado desde el servidor a su navegador web. Todo el PHP presente en la página web está procesado y despojado de la página; Lo único que se devuelve al cliente desde el servidor web es la salida HTML pura.
+
+Todo el código PHP debe incluirse dentro de una de las tres etiquetas de marcado especiales que se realizan son reconocidas por el analizador PHP.
+
+<? El código PHP PHP va aquí?>
+
+<? El código PHP va aquí?>
+
+<script language = "php"> El código PHP va aquí </script>
+
+Una etiqueta más común es el <? Php ...?> Y también usaremos la misma etiqueta en nuestro tutorial.
+
+Desde el próximo capítulo, comenzaremos con la configuración del entorno PHP en su máquina y luego desenterraremos casi todos los conceptos relacionados con PHP para que se sienta cómodo con el lenguaje PHP.

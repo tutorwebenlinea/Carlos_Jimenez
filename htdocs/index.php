@@ -1,75 +1,91 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
-    </script>
-  </head>
-  <title>
-    Document
-  </title>
-  <body>
-    <div class="w3-container">
-      <h4>
-        Crear Empresa
-      </h4>
-      <button class="w3-button w3-circle w3-green crear_empresa" type="submit">
-        <a href="./crear_empresa.php">
-          +
-        </a>
-      </button>
-    </div>
-    <div class="w3-container">
-      <h4>
-        Crear Empresa
-      </h4>
-      <button class="w3-button w3-circle w3-green" type="submit">
-        +
-      </button>
-    </div>
-    <div class="w3-container">
-      <h4>
-        Crear campaña
-      </h4>
-      <button class="w3-button w3-circle w3-green">
-        +
-      </button>
-    </div>
-    <div class="w3-container">
-      <h4>
-        Criterios de avaluacion
-      </h4>
-      <button class="w3-button w3-circle w3-green">
-        +
-      </button>
-    </div>
-    <!-- The Modal -->
-    <div class="w3-modal" id="crear_emporesa">
-      <div class="w3-modal-content">
-        <div class="w3-container">
-          <span class="w3-button w3-display-topright" onclick="document.getElementById('crear_emporesa').style.display='none'">
-            ×
-          </span>
-          <div class="w3-container w3-green">
-            <h2>
-              Header
-            </h2>
-          </div>
-          <form class="w3-container">
-            <label>
-              Nombrer de la empresa
-            </label>
-            <input class="w3-input" type="text"/>
-          </form>
-        </div>
-      </div>
-    </div>
-    <script src="./js/crear_empresa/js.js" type="text/javascript">
-    </script>
-  </body>
-</html>
+<?php
+include "./php/controlador/php.php";
+if ((isset($_REQUEST['url']))) {
+    // Controlador($_GET['var']);
+    $url = explode("/", $_REQUEST['url']);
+} else {
+
+$url="dashboard";
+
+// var_dump($_REQUEST['url']);
+// echo "<br>";
+// for ($i = 0; $i < count($url); $i++) {
+//     echo $url[$i];
+//     echo "<br>";
+}
+
+
+$arrFiles = glob("./pages/*", GLOB_ONLYDIR);
+
+$directorios = array();
+
+for ($i=0; $i < count($arrFiles); $i++) { 
+
+    $directorios[$i] = explode("./pages/", $arrFiles[$i]);
+}
+
+// var_dump($directorios);
+
+
+if ($url[0] == "settings") {
+
+    include_once "./pages/settings/settings.php";
+
+} elseif ($url[0] == "transactions") {
+
+    include_once "./pages/transactions/transactions.php";
+
+} elseif ($url[0] == "upgrade") {
+
+    include_once "./pages/upgrade-to-pro/upgrade-to-pro.php";
+
+} elseif ($url[0] == "dashboard") {
+
+    include_once "./pages/dashboard/dashboard.php";
+
+} else {
+
+    include_once "./pages/examples/404.html";
+}
+
+
+
+// //////////////////////////////////////////////////////////////////
+// Regresa la pagina correspondiente 
+// a la petición usando el directorio como referencia 
+ 
+// if (isset($_REQUEST['pag'])) {
+
+//     $parametros=explode("/", $_REQUEST["pag"]);
+//     $param = array("vista"=>$parametros[0]);
+
+//     // var_dump($param);
+//     // var_dump($_SERVER);
+//     // $url=SERVERURL;
+    
+//     $paguina ="./src/pag/inicio/pag.php";
+    
+//     //  Solo si existe la pagina la mostrara 
+//     if (file_exists("./src/pag/{$param["vista"]}/pag.php")) {
+
+//     $paguina = "./src/pag/{$param["vista"]}/pag.php";
+
+//     }elseif ($param["vista"]=="") {
+
+//     $paguina = "./src/pag/inicio/pag.php";
+
+//     }else{
+
+//     $paguina = "./src/pag/error/pag.php";
+//     }
+
+//     include $paguina;
+//     // echo "./src/pag/{$param["vista"]}/pag.php";
+// }else{
+
+// include "./src/pag/inicio/pag.php";
+
+// }
+
+
+

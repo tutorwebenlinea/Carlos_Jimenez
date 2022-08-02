@@ -1,0 +1,10 @@
+https://www.igniteui.com/doughnut-chart/labels-tooltips
+https://www.chartjs.org/docs/latest/samples/other-charts/multi-series-pie.html
+
+https://www.chartjs.org/docs/latest/
+
+https://code.tutsplus.com/es/tutorials/how-to-draw-a-pie-chart-and-doughnut-chart-using-javascript-and-html5-canvas--cms-27197
+
+https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Nested_pie_series
+
+https://jsfiddle.net/codefuncode/7zd4qu0o/
